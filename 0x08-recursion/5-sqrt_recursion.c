@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * sqrt_check - checks for the square root of b
+ * sqrt_check - checks for the square root of c
  * @g: guess at sqrt
- * @b: number to find sqrt of
+ * @c: number to find sqrt of
  *
- * Return: -1 or sqrt of b
+ * Return: -1 or sqrt of c
  */
-int sqrt_check(int g, int b)
+int sqrt_check(int g, int c)
 {
 	if (g * g == c)
 		return (g);
-	if (g * g > b)
+	if (g * g > c)
 		return (-1);
-	return (sqrt_check(g + 1, b));
+	return (sqrt_check(g + 1, c));
 }
 
 /**
@@ -28,5 +28,4 @@ int _sqrt_recursion(int n)
 		return (0);
 	return (sqrt_check(1, n));
 }
-
 
